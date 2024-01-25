@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'development' ? '' : '/ocr-vue/',
   plugins: [
     vue(),
     AutoImport({
